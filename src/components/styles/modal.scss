@@ -1,0 +1,311 @@
+$opacity-transition: opacity ease-in-out;
+
+.close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 16px;
+  text-decoration: none;
+  width: 16px;
+
+  svg {
+    width: 16px;
+  }
+}
+
+.modal-wrapper {
+  align-items: center;
+  background: #0000008c;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+// #modal {
+// 	opacity: 1;
+// 	transition: $opacity-transition;
+// 	visibility: hidden;
+
+// 	&:target {
+// 		opacity: 1;
+// 		visibility: visible;
+
+// 		.modal-body {
+// 			opacity: 1;
+// 			transform: translateY(1);
+// 		}
+// 	}
+
+// 	.modal-body {
+// 		max-width: 500px;
+// 		opacity: 0;
+// 		transform: translateY(-100px);
+// 		transition: $opacity-transition;
+// 		width: 100%;
+// 		z-index: 1;
+//         background-color: #fff;
+// 	}
+// }
+// .rer ~#modal{
+//     visibility:hidden;
+//     &:target {
+// 		opacity: 1;
+// 		visibility: hidden;}
+
+// }
+.outside-trigger {
+  bottom: 0;
+  cursor: default;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.button__link {
+  text-decoration: none;
+}
+
+.bodyFor {
+  width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  height: 450px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 6px;
+  box-shadow: 0px 2px 2px gray;
+  transition: all 0.8s ease-in-out;
+  padding: 25px 40px;
+}
+.Fac {
+  display: flex;
+  flex-direction: column;
+}
+.texy {
+  border: 0;
+  outline: 0;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 0.5px solid rgb(228, 228, 228);
+  background-color: #fff !important;
+}
+.FORGoPas {
+  text-align: right;
+  margin-bottom: 15px;
+  letter-spacing: 0.09em;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 500;
+}
+.fgl {
+  margin-bottom: 5px;
+}
+
+.ROGMA {
+  padding: 12px 10px;
+  background-color: #50b450;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.TwittF {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.usu {
+  font-size: 12px;
+  color: #383131;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+.useFZ {
+  width: 64px;
+  height: 1px;
+  background-color: rgb(228, 228, 228);
+}
+
+.orUse {
+  color: #000;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+.cbutton {
+  appearance: none;
+  background: #18be4f;
+  border-radius: 0.25em;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-left: 12px;
+  // height: 3em;
+  // line-height: 3em;
+  padding: 6px 13px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+  &:hover {
+    background-color: lighten(#16a34a, 2%);
+  }
+}
+
+// -------------- DETAILS MODAL
+
+.details-modal {
+  background: #ffffff;
+  border-radius: 0.5em;
+  box-shadow: 0 10px 20px rgba(black, 0.2);
+  left: 50%;
+  max-width: 30em;
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: left;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+  // -------------- CLOSE
+
+  .details-modal-close {
+    align-items: center;
+    color: #111827;
+    display: flex;
+    height: 4.5em;
+    cursor: pointer;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4.5em;
+
+    svg {
+      display: block;
+    }
+  }
+
+  // -------------- TITLE
+
+  .details-modal-title {
+    color: #111827;
+    padding: 1.5em 2em;
+    pointer-events: all;
+    position: relative;
+    width: calc(100% - 4.5em);
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  // -------------- CONTENT
+
+  .details-modal-content {
+    padding: 2em;
+    pointer-events: all;
+  }
+}
+
+// -------------- OVERLAY
+
+.details-modal-overlay {
+  transition: opacity 0.2s ease-out;
+  pointer-events: none;
+  background: #000000cc;
+  position: fixed;
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  details[open] & {
+    pointer-events: all;
+    opacity: 0.5;
+  }
+}
+
+// -------------- DETAILS
+
+details {
+  summary {
+    list-style: none;
+
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+}
+.traffic {
+  text-align: center;
+}
+
+
+select {
+    // A reset of styles, including removing the default dropdown arrow
+    // appearance: none;
+    background-color: #fff;
+    border: none;
+    padding: 6px 1em 6px 10px;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    line-height: inherit;
+  
+    // Stack above custom arrow
+    z-index: 1;
+  
+    // Remove dropdown arrow in IE10 & IE11
+    // @link https://www.filamentgroup.com/lab/select-css.html
+    // &::-ms-expand {
+    //   display: none;
+    // }
+  
+    // Remove focus outline, will add on alternate element
+    outline: none;
+  }
+  .select{
+      width:83%
+  }
+//   .goingFR{
+//       width:20%;
+//   }
+
+
+@media screen  {
+    
+}
